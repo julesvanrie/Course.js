@@ -22,4 +22,4 @@ You will see a blank page with some first code inside. Don't worry about underst
 
 Let's try it out! At the top of the page, click on the ▶ button and marvel at what this little piece of code does.
 
-To go back to the code click on the **</>** buttion.
+To go back to the code click on the **</>** button.

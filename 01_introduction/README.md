@@ -61,12 +61,14 @@ Try drawing something like this:
 
 ![Square with circles](square.png)
 
+In this example, the square has a size of 100, and the circles have a diameter of 40.
+
 You'll need to draw a rectangle. What function would you need for that? Think about it, and give it a try...
 
 <br/>
 
 <details>
-<summary>Didn't work? Click here</summary>
+<summary><strong>Didn't work?</strong> Click here</summary>
 
 Just like me, you probably tried `rectangle()`, ... and failed. Turns out, programmers are lazy. They don't like to type a lot, so they make abbrevations. Try `rect()`.
 </details>
@@ -74,7 +76,7 @@ Just like me, you probably tried `rectangle()`, ... and failed. Turns out, progr
 <br/>
 
 <details>
-<summary>Having difficulty positioning the different elements? Click here</summary>
+<summary><strong>Having difficulty positioning the different elements?</strong> Click here</summary>
 
 You probably figured out by now that the first two arguments stand for the `x` and `y` coordinates of the element you're drawing.
 
@@ -84,7 +86,7 @@ Now, between `circle()` and `rect()`, these `x` and `y` behave slightly differen
 <br/>
 
 <details>
-<summary>Solution (only click this once you tried it yourself first</summary>
+<summary><strong>Solution</strong> (only click this once you tried it yourself first)</summary>
 
 ```js
 function draw() {

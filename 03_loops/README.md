@@ -101,8 +101,8 @@ function draw() {
   let yStart = 200;
   let diameter = 40;
 	let spacing = 10;
-	let nHorizontal = 5;
-	let nVertical = 3;
+	let nHorizontal = 7;
+	let nVertical = 6;
 	fill('blue');
 	rect(
 		xStart,
@@ -120,7 +120,9 @@ function draw() {
     	circle(x, y, diameter);
 		}
   }
-}```
+}
+```
+
 </details>
 
 <br>

@@ -2,7 +2,7 @@
 
 Think about this for a second: if I ask you to draw 3 circles, all on the same line, next to each other, how would you do that?
 
-You could write three times almost the same line of code. And that would work. But what if I ask you to draw 30 circles next to each other? That would become a bit repetitive, right?
+You could write three times almost the same line of code. And that would work. But what if I ask you to draw 30 circles next to each other? That would become a bit repetitive, right? I guess you wouldn't like to do that...
 
 ## DRY, or Don't Repeat Yourself
 
@@ -17,9 +17,9 @@ function draw() {
   let xStart = 400;
   let yStart = 400;
   let diameter = 20;
-	fill('blue');
+  fill('blue');
   for (let i = 0; i < 3; i = i + 1) {
-    x = xStart + i*diameter;
+    x = xStart + i * diameter;
     circle(x, yStart, diameter);
   }
   text("I'm done.", 400, 450);
@@ -36,20 +36,20 @@ Let's understand the lines that starts with `for` a bit better.
   - The *iteration*: `i = i + 1`: we increase our counter (or decrease the counter, that's also possible).
 
 So what happens?
-1. Our interpreter reads the for statement for the first time. It initializes `i` to be 0.
-2. The interpreter checks the condition: is i less than 3? Yes it is.
+1. Our interpreter reads the for statement for the first time. It initializes `i` to be 0. (It creates a variable `i` with value `0`.)
+2. The interpreter checks the condition: is `i` less than `3`? Yes it is. (Of course, it's `0` for now.)
 3. So it executes the code in between the curly braces (in our case: it calculates x and draws a circle).
 4. After it has done executing the block of code, it increases i with 1 (because we told it to in the for statement using `i = i + 1`).
-5. It goes back to number 2: it checks again if the condition is still valid, and so on.
-6. After 3 times, it will see that `i` is no longer less than 3. So it will not execute the code anymore, but continues with the rest of the code. (In our case it writes "I'm done.")
+5. It goes back to number 2: it checks again if the condition is still valid. Yes it is (`i` has now become `1`). So it executes the code again (point 3), and so on.
+6. After 3 times, it will see that `i` is no longer less than 3 (because we just increased `i` to 3, and that is not less than 3). So it will not execute the code anymore, but continues with the rest of the code. (In our case it writes "I'm done.")
 
-> ✍️ Now change this bit of code to draw the 30 circles I talked about before. See how easy that goes?
-
-> ✍️ Try drawing overlapping circles by only changing the `for` line.
+> ✍️ Now change this bit of code to draw the 30 circles we talked about before. See how easy that goes?
 
 > ✍️ Try changing the code to draw 4 circles under each other (vertically instead of horizontally).
 
 > ✍️ Try changing the code to draw 5 circles in a diagonal from top left to bottom right.
+
+> ✍️ Try drawing overlapping circles by only changing the `for` line.
 
 ## Shorter notation
 
@@ -68,7 +68,7 @@ i = i + 1;  // The long way
 i++;        // The short way using the increment operator
 ```
 
-`++` is the so called `increment` operator. There also exists a `--` operator. Guess what that one does...
+That `++` is the so called `increment` operator. There also exists a `--` operator. Guess what that one does...
 
 ## `i` doesn't need to be `i`
 
@@ -76,7 +76,7 @@ We used `i` here, and you will see it a lot, but you can use any name you want. 
 
 ```js
 for (let step = 0; step < 3; step++) {
-  // Here goes some code that uses step
+  // Here goes some code that uses step (instead of i)
 }
 ```
 
@@ -84,7 +84,7 @@ for (let step = 0; step < 3; step++) {
 
 You can also create a loop within a loop.
 
-> ✍️ Try using a nested loop to draw this. (Hmmm, doesn't that look like a certain game?)
+> ✍️ Try using a nested loop to draw this. (Hmmm, doesn't that look like a certain game? Imagine some white and yellow circles in there.)
 ![Game board](board.png)
 
 You can use `background('white');` in the setup function to set the background to ... white.

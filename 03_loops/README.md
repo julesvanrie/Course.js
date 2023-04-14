@@ -85,6 +85,7 @@ for (let step = 0; step < 3; step++) {
 You can also create a loop within a loop.
 
 > ✍️ Try using a nested loop to draw this. (Hmmm, doesn't that look like a certain game?)
+![Game board](board.png)
 
 You can use `background('white');` in the setup function to set the background to ... white.
 
@@ -122,7 +123,6 @@ function draw() {
   }
 }
 ```
-
 </details>
 
 <br>

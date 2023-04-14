@@ -101,25 +101,25 @@ function draw() {
   let xStart = 200;
   let yStart = 200;
   let diameter = 40;
-	let spacing = 10;
-	let nHorizontal = 7;
-	let nVertical = 6;
-	fill('blue');
-	rect(
-		xStart,
-		yStart,
-		spacing + nHorizontal*(diameter+spacing),
-		spacing + nVertical*(diameter+spacing)
-	)
-	fill('white');
-	let xFirstCenterPoint = xStart + spacing + diameter/2;
-	let yFirstCenterPoint = yStart + spacing + diameter/2;
+  let spacing = 10;
+  let nHorizontal = 7;
+  let nVertical = 6;
+  fill('blue');
+  rect(
+    xStart,
+    yStart,
+    spacing + nHorizontal*(diameter+spacing),
+    spacing + nVertical*(diameter+spacing)
+  );
+  fill('white');
+  let xFirstCenterPoint = xStart + spacing + diameter/2;
+  let yFirstCenterPoint = yStart + spacing + diameter/2;
   for (let i = 0; i < nHorizontal; i++) {
     x = xFirstCenterPoint + i * (diameter + spacing);
-		for (let j = 0; j < nVertical; j++) {
-			y = yFirstCenterPoint + j * (diameter + spacing)
-    	circle(x, y, diameter);
-		}
+    for (let j = 0; j < nVertical; j++) {
+      y = yFirstCenterPoint + j * (diameter + spacing);
+      circle(x, y, diameter);
+    }
   }
 }
 ```

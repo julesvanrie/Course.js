@@ -1,8 +1,8 @@
 /*
-Define the parameters for our program
-Note how we changed these into constants
-That is prudent: we don't want to accidentally changes these values
-*/
+ * Define the parameters for our program
+ * Note how we changed these into constants
+ * That is prudent: we don't want to accidentally changes these values
+ */
 const xStart = 200;
 const yStart = 200;
 const diameter = 40;
@@ -11,19 +11,18 @@ const nHorizontal = 7;
 const nVertical = 6;
 
 
+/**
+ * Setup of the openprocessing.org environment
+ */
 function setup() {
-  /*
-  Setup: this is needed for our openprocessing.org environment
-  */
   createCanvas(windowWidth, windowHeight);
   background('white');
 }
 
-
+/**
+ * Main function that draws on the screen
+ */
 function draw() {
-  /*
-  Our main function with our main logic
-  */
   fill('blue');
   rect(
     xStart,
@@ -39,17 +38,19 @@ function draw() {
 }
 
 
+/**
+ * Draw one piece (a circle with diameter set globally)
+ * @param {number} row - the row in which to draw the piece
+ * @param {number} column - the column in which to draw the piece
+ * @param {string|Object|number[]} color - the color of the piece
+ * @return {void}
+*/
 function drawPiece(row, column, color) {
-  /*
-  Draw one piece (a circle with diameter set globally)
-  in position row - column on the board
-  Column starts counting from 0 from the left
-  Row starts counting from 0 from the bottom of the board
-  */
-
-  // Determine x and y of our pieces center point
+  // Determine x of our piece's center point
   xFirstColumn = xStart + spacing + diameter / 2;
   x = xFirstColumn + row * (spacing + diameter);
+
+  // Determine x of our piece's center point
   yBottomBoard = yStart + spacing + nVertical * (diameter + spacing);
   yFirstRow = yBottomBoard - spacing - diameter / 2;
   y = yFirstRow - column * (spacing + diameter);

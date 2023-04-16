@@ -126,15 +126,15 @@ When we have done that, we can also position the four circles easily, using just
 function draw() {
   let x = 400;
   let y = 400;
-  let size = 100;
+  let side = 100;
   let diameter = 40;
   fill("red");
-  rect(x, y, size);
+  rect(x, y, side);
   fill("yellow");
   circle(x, y, diameter);           // left top
-  circle(x+size, y, diameter);      // right top
-  circle(x, y+size, diameter);      // left bottom
-  circle(x+size, y+size, diameter); // right bottom
+  circle(x+side, y, diameter);      // right top
+  circle(x, y+side, diameter);      // left bottom
+  circle(x+side, y+side, diameter); // right bottom
 }
 ```
 </details>

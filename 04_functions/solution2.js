@@ -1,4 +1,4 @@
-/*
+/**
  * Define the parameters for our program
  * Note how we changed these into constants
  * That is prudent: we don't want to accidentally changes these values
@@ -7,6 +7,8 @@ const xStart = 200;
 const yStart = 200;
 const diameter = 40;
 const spacing = 10;
+const nHorizontal = 7;
+const nVertical = 6;
 
 
 /**

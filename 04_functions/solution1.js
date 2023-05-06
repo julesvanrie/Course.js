@@ -1,4 +1,4 @@
-/*
+/**
  * Define the parameters for our program
  * Note how we changed these into constants
  * That is prudent: we don't want to accidentally changes these values
